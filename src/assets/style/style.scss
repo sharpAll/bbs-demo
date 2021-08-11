@@ -1,0 +1,215 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 3px rgb(18 18 18 / 10%);
+  .header-box {
+    height: 52px;
+    line-height: 52px;
+    width: 1100px;
+    margin: auto;
+    .title {
+      float: left;
+      width: 150px;
+      height: 52px;
+      background: center url("../assets/img/title.png") no-repeat;
+      position: relative;
+      top: 5px;
+    }
+    .menu {
+      margin-left: 25px;
+      float: left;
+      .item {
+        display: inline-block;
+        margin: 0 15px;
+        color: #8590a6;
+        font-size: 15px;
+        cursor: pointer;
+        &.cur {
+          color: #121212;
+          position: relative;
+          &::after {
+            position: absolute;
+            right: 0;
+            bottom: -1px;
+            left: 0;
+            height: 4px;
+            background: #06f;
+            content: "";
+          }
+        }
+      }
+    }
+    .input-box {
+      float: left;
+      .el-input {
+        margin-left: 110px;
+        width: 350px;
+      }
+      .publish-btn {
+        margin-left: 20px;
+        display: inline-block;
+      }
+    }
+    .user-box {
+      float: right;
+      cursor: pointer;
+      .user-name {
+        color: #8590a6;
+        font-size: 17px;
+        margin-right: 8px;
+      }
+      .user-icon {
+        width: 30px;
+        height: 30px;
+        vertical-align: -10px;
+      }
+    }
+  }
+}
+.main {
+  width: 1000px;
+  margin: 54px auto 0;
+  overflow-y: auto;
+  min-height: calc(100vh - 54px);
+  box-shadow: 0 1px 3px rgb(18 18 18 / 13%);
+  .content-list {
+    padding: 0 20px;
+    .list-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #eee;
+      .option-box {
+        .name {
+          display: inline-block;
+          color: #444;
+          font-weight: 600;
+          font-size: 15px;
+        }
+        .time {
+          display: inline-block;
+          font-size: 14px;
+          color: #8590a6;
+          margin-left: 20px;
+        }
+        .type {
+          float: right;
+          font-size: 14px;
+          color: #8590a6;
+        }
+      }
+      .article-box {
+        .title {
+          margin-top: 10px;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 1.6;
+          color: #121212;
+          cursor: pointer;
+          &:hover {
+            color: #175199;
+          }
+        }
+        .content {
+          margin-top: 9px;
+          font-size: 15px;
+          color: #121212;
+          line-height: 1.6;
+          overflow-y: auto;
+          &.content-ellipsis {
+            cursor: pointer;
+            &:hover {
+              color: #646464;
+            }
+            .more-btn {
+              float: unset;
+            }
+          }
+          .more-btn {
+            margin-left: 4px;
+            color: #175199;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            &:hover {
+              color: grey;
+            }
+          }
+        }
+      }
+      .operate-box {
+        padding: 10px 0;
+        font-size: 14px;
+        .blue-box {
+          cursor: pointer;
+          display: inline-block;
+          line-height: 30px;
+          padding: 0 12px;
+          color: #06f;
+          background: rgba(0, 102, 255, 0.1);
+          margin-right: 5px;
+          border-radius: 3px;
+          &:hover {
+            background-color: rgba(0, 102, 255, 0.15);
+          }
+          &.cur {
+            background: #06f;
+            color: #fff;
+            &:hover {
+              background-color: #06f;
+            }
+          }
+        }
+        .item-box {
+          margin-left: 24px;
+          font-size: 14px;
+          color: #8590a6;
+          cursor: pointer;
+          user-select: none;
+          line-height: 30px;
+          &:hover {
+            color: #76839b;
+          }
+        }
+      }
+      .comment-box {
+        border-radius: 4px;
+        border: 1px solid #ebebeb;
+        .input-box {
+          padding: 12px 20px;
+        }
+        .comment-item {
+          padding: 12px 20px 10px;
+          line-height: 1.6;
+          font-size: 15px;
+          color: #121212;
+          border-bottom: 1px solid #ebebeb;
+          .title-box {
+            margin-bottom: 6px;
+            .user {
+              font-weight: 600;
+            }
+            .date {
+              float: right;
+              font-size: 14px;
+              color: #8590a6;
+            }
+          }
+          .content {
+            .del-btn {
+              color: #76839b;
+              font-size: 14px;
+              margin-left: 10px;
+              &:hover {
+                color: #76839b;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
